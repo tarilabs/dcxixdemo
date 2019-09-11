@@ -22,7 +22,6 @@ public class HttpUtils {
             httpPost.setEntity(new StringEntity(body));
             CloseableHttpResponse response = client.execute(httpPost);
             String responseResult = EntityUtils.toString(response.getEntity());
-            System.out.println(responseResult);
             client.close();
             return responseResult;
         } catch (Exception e) {
